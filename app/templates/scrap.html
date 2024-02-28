@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Data Table</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Rate.am</h2>
+
+    <table id="bankDataTable">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Բանկ</th>
+                <th></th>
+                <th>Մասնաճյուղեր</th>
+                <th>Ամսաթիվ</th>
+                <th>Ժամ</th>
+                <th>Առք USD</th>
+                <th>Վաճ․ USD</th>
+                <th>Առք EUR</th>
+                <th>Վաճ․ EUR</th>
+                <th>Առք RUB</th>
+                <th>Վաճ․ RUB</th>
+                <th>Առք GBP</th>
+                <th>Վաճ․ GBP</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in data %}
+                <tr>
+                    {% for cell in row %}
+                        <td>{{ cell }}</td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>
